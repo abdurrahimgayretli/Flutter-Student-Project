@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/student.dart';
 import 'package:flutter_application_1/screens/student_add.dart';
+import 'package:flutter_application_1/screens/student_edit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -122,7 +123,12 @@ class _HomeState extends State<Home> {
                 Text("Guncelle"),
               ],
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => StudentEdit(selectedStudent)));
+            },
           ),
         ),
         const SizedBox(
